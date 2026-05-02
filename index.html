@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Study Hub</title>
+
+<style>
+body {
+margin: 0;
+font-family: Arial;
+background: linear-gradient(135deg, #0f172a, #1e293b);
+color: white;
+text-align: center;
+}
+
+header {
+background: #020617;
+padding: 15px;
+font-size: 22px;
+}
+
+nav {
+margin: 15px;
+}
+
+button {
+margin: 5px;
+padding: 10px 15px;
+border: none;
+border-radius: 10px;
+background: #3b82f6;
+color: white;
+cursor: pointer;
+}
+
+button:hover {
+background: #2563eb;
+}
+
+.container {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+
+iframe {
+width: 800px;
+height: 500px;
+border: none;
+border-radius: 15px;
+background: black;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>📚 Study Hub</header>
+
+<nav>
+<button onclick="loadGame('https://itch.io/embed-upload/your-game1')">Juego 1</button>
+<button onclick="loadGame('https://itch.io/embed-upload/your-game2')">Juego 2</button>
+<button onclick="loadGame('https://itch.io/embed-upload/your-game3')">Juego 3</button>
+</nav>
+
+<div class="container">
+<iframe id="gameFrame" src=""></iframe>
+</div>
+
+<script>
+function loadGame(url) {
+document.getElementById("gameFrame").src = url;
+}
+</script>
+
+</body>
+</html>
